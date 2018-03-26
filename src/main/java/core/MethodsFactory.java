@@ -2,12 +2,10 @@ package core;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.*;
-import sun.rmi.runtime.Log;
 import utils.Logger;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 
 /**
  * Created by Dima on 06.06.2016.

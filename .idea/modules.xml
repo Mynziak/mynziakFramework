@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mynziakFramework.iml" filepath="$PROJECT_DIR$/mynziakFramework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mynziak.iml" filepath="$PROJECT_DIR$/mynziak.iml" />
     </modules>
   </component>
 </project>

@@ -8,8 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import java.util.concurrent.TimeUnit;
-
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -17,17 +16,16 @@ import java.util.concurrent.TimeUnit;
  */
 public class BrowseFactory extends MethodsFactory {
 
-    private static final String DIR_CHROME ="C:\\chromedriver.exe ";
+    public static final String PATH_TO_WIN_CHROME_DRIVER = new File("src/main/resources/drivers/chromedriver.exe").getAbsolutePath();
 
     @BeforeTest
-
     @Parameters({"browser"})
-    public void setupBrowser(@Optional("CH") String browser){
+    public void setupBrowser(@Optional("CH") String browser) {
 
-        if(browser.equalsIgnoreCase("FF")){
-            myDriver =new FirefoxDriver();
-        } else if (browser.equalsIgnoreCase("CH")){
-            //  System.setProperty("webdriver.chrome.driver", DIR_CHROME);
+        if (browser.equalsIgnoreCase("FF")) {
+            myDriver = new FirefoxDriver();
+        } else if (browser.equalsIgnoreCase("CH")) {
+            System.setProperty("webdriver.chrome.driver", PATH_TO_WIN_CHROME_DRIVER);
             myDriver = new ChromeDriver();
         }
         driver = new EventFiringWebDriver(myDriver);
@@ -39,7 +37,7 @@ public class BrowseFactory extends MethodsFactory {
     }
 
     @AfterTest
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
         driver.quit();
     }

@@ -10,7 +10,6 @@ import sun.rmi.runtime.Log;
 
 public class StaticDriver {
     protected static WebDriver myDriver;
-    protected static WebDriver[] drivers = new WebDriver[6];
     public static EventFiringWebDriver driver;
 
     protected static String mwh; //Main Window handle
